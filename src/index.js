@@ -39,7 +39,14 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-const contact = document.querySelector('.contact')
+const logoImg = document.querySelector("#logo-img");
+logoImg.src = siteContent['images']['logo-img'];
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent['images']['cta-img'];
+const accentImg = document.querySelector('#middle-img');
+accentImg.src = siteContent['images']['accent-img']
+
+
 
 const footer = document.querySelector('footer')
 footer.textContent = siteContent.footer.copyright
