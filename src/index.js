@@ -44,10 +44,25 @@ logoImg.src = siteContent['images']['logo-img'];
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent['images']['cta-img'];
 const accentImg = document.querySelector('#middle-img');
-accentImg.src = siteContent['images']['accent-img']
+accentImg.src = siteContent['images']['accent-img'];
+
+const contact = document.querySelector('.contact');
+const contactTitle = document.createElement('h4');
+contactTitle.textContent = siteContent.contact['contact-h4'];
+contact.appendChild(contactTitle);
+const contactAddress = document.createElement('p');
+contactAddress.textContent = siteContent.contact['address'];
+contact.appendChild(contactAddress);
+const contactPhone = document.createElement('p');
+contactPhone.textContent = siteContent.contact['phone'];
+contact.appendChild(contactPhone);
+const contactEmail = document.createElement('p');
+contactEmail.textContent = siteContent.contact['email'];
+contact.appendChild(contactEmail);
+contact.classList.add('contact')
 
 
 
-const footer = document.querySelector('footer')
-footer.textContent = siteContent.footer.copyright
-footer.classList.add('bold')
+const footer = document.querySelector('footer');
+footer.textContent = siteContent.footer.copyright;
+footer.classList.add('bold');
