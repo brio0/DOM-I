@@ -46,6 +46,30 @@ ctaImg.src = siteContent['images']['cta-img'];
 const accentImg = document.querySelector('#middle-img');
 accentImg.src = siteContent['images']['accent-img'];
 
+
+const topH4 = document.querySelectorAll('.top-content h4');
+topH4[0].textContent = siteContent['main-content']['features-h4'];
+topH4[1].textContent = siteContent['main-content']['about-h4'];
+
+const topPara = document.querySelectorAll('.top-content p')
+topPara[0].textContent = siteContent['main-content']['features-content'];
+topPara[1].textContent = siteContent['main-content']['about-content']
+
+
+
+const h4s = document.querySelectorAll('.bottom-content div h4')
+h4s[0].textContent = siteContent['main-content']['services-h4']
+h4s[1].textContent = siteContent['main-content']['product-h4']
+h4s[2].textContent = siteContent['main-content']['vision-h4']
+const paras = document.querySelectorAll('.bottom-content div p')
+paras[0].textContent = siteContent['main-content']['services-content']
+paras[1].textContent = siteContent['main-content']['product-content']
+paras[2].textContent = siteContent['main-content']['vision-content']
+
+document.querySelector('.cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta-text button').textContent = siteContent.cta.button
+
+
 const contact = document.querySelector('.contact');
 const contactTitle = document.createElement('h4');
 contactTitle.textContent = siteContent.contact['contact-h4'];
