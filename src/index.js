@@ -50,7 +50,6 @@ accentImg.src = siteContent['images']['accent-img'];
 const topH4 = document.querySelectorAll('.top-content h4');
 topH4[0].textContent = siteContent['main-content']['features-h4'];
 topH4[1].textContent = siteContent['main-content']['about-h4'];
-
 const topPara = document.querySelectorAll('.top-content p')
 topPara[0].textContent = siteContent['main-content']['features-content'];
 topPara[1].textContent = siteContent['main-content']['about-content']
@@ -85,8 +84,15 @@ contactEmail.textContent = siteContent.contact['email'];
 contact.appendChild(contactEmail);
 contact.classList.add('contact')
 
+const footer = document.querySelector('footer a');
+footer.classList.add('bold')
+footer.textContent = siteContent.footer.copyright
 
 
-const footer = document.querySelector('footer');
-footer.textContent = siteContent.footer.copyright;
-footer.classList.add('bold');
+
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkText = Object.values(siteContent.nav);
+navLinks.forEach((item, index) => {
+  item.textContent = navLinkText[index]
+  item.classList.add('italic')
+});
